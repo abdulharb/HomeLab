@@ -308,7 +308,8 @@ Done? Profit???
 1. Make an Agent Policy. It will walk you though this after you add the Fleet server. (or go to `[URL]/app/fleet/policies?create`)
 	1. I called mine `Windows Domain Joined` 
 	2. It will give you a script to run. I want to run it via GPO
-![[Pasted image 20240630165308.png]]
+![image](https://github.com/abdulharb/HomeLab/assets/25036469/5b250c0a-21c5-4490-892c-6c800df197de)
+
 
 # Install via GPO
 
@@ -414,7 +415,8 @@ Make sure to save the file path `\\DC01\Deployment Script` in my case
 1. Open `Group Policy Management`
 	1. Windows Key + R --> type `gpmc.msc`
 2. Go to `Forest: [DOMAIN]` --> `Domains` --> `[Domain]` --> `[Group Policy Objects]`
-	1. You should be here:![[Pasted image 20240630170647.png]]
+	1. You should be here:![image](https://github.com/abdulharb/HomeLab/assets/25036469/508bf87d-3a43-4318-a21a-bd5b35b3d972)
+
 		p.s. I got those other GPO's from Black Hills Info Sec's [GitHub](https://github.com/blackhillsinfosec/EventLogging)! I might need to do a start a Lab from scratch write up... but later™... 
 3. Right click on the folder  `Group Policy Objects` and click `New`
 	1. Give it a name, I called mine `Install ELK Agent`
@@ -451,7 +453,8 @@ Make sure to save the file path `\\DC01\Deployment Script` in my case
 	3. Click `Link an Existing GPO...` 
 	4. Click the GPO you made, `Install ELK Agent` in my case
 13. To make things easy for me, I'm going to add everyone to the GPO 
-	![[Pasted image 20240630190924.png]]
+	![image](https://github.com/abdulharb/HomeLab/assets/25036469/a57dfbdb-653b-49e7-91a9-19751252bda7)
+
 
 Now I'm going to force a GPO Update with `gpupdate /force` (GPO by default update every 90 to 120 minutes so you could wait and things should get pushed out, I'm just an impatient little girl) and reboot all my servers/workstations BUT the DC and we should see agents start to show up in our elastic Dashboard. 
 If you go to `[URL]/app/fleet/agents` you should get see all the agents you have installed! (5 Windows Servers/Workstations in my case + a Fleet Server)
