@@ -294,7 +294,7 @@ Now you should be able to access your ELK Server by the DNS record  `elk.local.a
 
 We now need to setup a Fleet Server, and I'm going to set it up on the same server that I have ELK running on.
 
-1. Go to `https://elk.al-harb.dev/app/fleet/agents` or `https://[URL]/app/fleet/agents`
+1. Go to `https://elk.local.al-harb.dev/app/fleet/agents` or `https://[URL]/app/fleet/agents`
 	1. Use the username `elastic` and the password that you saved above!
 		1. Oh you didn't safe the password? run `sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic` and it should give you a new password.
 2. Click `Add Fleet Server`!
