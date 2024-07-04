@@ -513,7 +513,7 @@ kk and with that, we are done here! You should have a fully working ELK stack wi
 
 Good luck everyone (me include)!
 
-## Acknowledgments
+# Acknowledgments
 https://simplifyingtechcode.wordpress.com/2024/03/15/how-to-install-and-configure-elasticsearch-kibana-logstash-8-12-version-on-ubuntu-linux-2024/
 
 https://medium.com/@musmanqureshi109/installation-steps-of-elk-stack-with-nginx-server-2a1961812f72
